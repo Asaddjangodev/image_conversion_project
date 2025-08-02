@@ -17,7 +17,7 @@ class ImageConversion(models.Model):
     converted_images = models.ImageField(upload_to="converted/", blank=True, null=True)
 
     format_form = models.CharField(max_length=10)
-    format_to = models.CharField(max_length=10)
+    format_to = models.CharField(max_length=10, choices=format_choice)
 
     created_at = models.DateTimeField(auto_now_add=True)
 

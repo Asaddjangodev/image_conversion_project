@@ -14,8 +14,8 @@ def home(request):
             return redirect('result', pk=conversion.pk)
     else:
         form = ImageUploadForm()
-    return render(request, 'images/home.html', {'form': form})
+    return render(request, 'converter/home.html', {'form': form})
 
 def result(request, pk):
     conversion = ImageConversion.objects.get(pk=pk)
-    return render(request, 'images/result.html', {'converision': conversion})
+    return render(request, 'converter/result.html', {'converision': conversion})

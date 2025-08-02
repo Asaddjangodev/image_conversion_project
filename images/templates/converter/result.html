@@ -12,21 +12,20 @@
             <div class="col-md-6">
                 <h3>Original Image</h3>
                 <img src="{{ conversion.original_image.url }}" class="img-fluid" alt="Original">
-                <p class="mt-2">{{ conversion.origina_image.name }}</p>
+                <p class="mt-2">{{ conversion.original_image.name }}</p>
             </div>
-    </div>
-    <div class="col-md-6">
-        <h3>Converted Image {{ conversion.format_to }}</h3>
-        <img src="{{ conversion.converted_image.url }}" class="img-fluid" alt="Converted">
+            <div class="col-md-6">
+                <h3>Converted Image ({{ conversion.format_to }})</h3>
+                <img src="{{ conversion.converted_image.url }}" class="img-fluid" alt="Converted">
+                <p class="mt-2">
+                    <a href="{{ conversion.converted_image.url }}" download class="btn btn-success mt-2">
+                        Download Converted Image
+                    </a>
+                </p>
+            </div>
+        </div>
 
-    <p class="mt-2">
-        <a href="{{ converted.converted_image.url }}" download class="btn-btn-success mt-2">
-            Download Converted Image
-        </a>
-    </p>
+        <a href="/" class="btn btn-primary mt-4">Convert Another Image</a>
     </div>
-</div>
-
-    <a href="/" class="btn btn-primary mt-4">Convert Another Image</a>
-</div>
 </body>
+</html>
