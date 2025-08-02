@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversion Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Conversion Result</h1>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Original Image</h3>
+                <img src="{{ conversion.original_image.url }}" class="img-fluid" alt="Original">
+                <p class="mt-2">{{ conversion.origina_image.name }}</p>
+            </div>
+    </div>
+    <div class="col-md-6">
+        <h3>Converted Image {{ conversion.format_to }}</h3>
+        <img src="{{ conversion.converted_image.url }}" class="img-fluid" alt="Converted">
+
+    <p class="mt-2">
+        <a href="{{ converted.converted_image.url }}" download class="btn-btn-success mt-2">
+            Download Converted Image
+        </a>
+    </p>
+    </div>
+</div>
+
+    <a href="/" class="btn btn-primary mt-4">Convert Another Image</a>
+</div>
+</body>
